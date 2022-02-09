@@ -1,0 +1,9 @@
+nav{
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+}
+#nav2{
+	margin:  auto;
+	/* border: chartreuse solid 1px; */
+}
