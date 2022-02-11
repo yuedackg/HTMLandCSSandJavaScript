@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url(./mycolor.css);
+
+.footer {
+	background-color: var(--darkblue);
+	padding: 38px 0 56px;
+
+}
+
+
+.footer .site img {
+	width: 47px;
+	margin-left: 14px;
+
+}
+
+.footer .site .corp {
+	color: white;
+	font-size: 16px;
+
+
+}
+
+.footer .add {
+	margin: 20px 0 36px 61px;
+	color: white;
+	font-size: 12px;
+	line-height: 2;
+
+}
+.footer .sns{
+	height: 59px;
+	align-items: center;
+	display: flex;
+	margin-left: 61px;
+	list-style: none;
+
+}
+.footer .sns li:not(:first-child){
+	margin-left: 25px;
+
+}
+.footer .sns img{
+	width: 35px;
+
+}
+@media ( min-width: 900px) {
+	.footer .container{
+		display: flex;
+		justify-content: space-between;
+
+	}
+	.footer .site img{
+		width: 59px;
+		margin-right: 18px;
+
+	}
+	.footer .site .corp{
+		font-size: 200px;
+
+	}
+	.footer .add {
+		margin: 22px 0 0 77px;
+
+	}
+}
+.footer .sns{
+	height: 59px;
+	align-items: center;
+
+}

@@ -6,10 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- stylesheet -->
+	<link rel="stylesheet" href="./mycolor.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="style-message.css">
 	<link rel="stylesheet" href="style-service.css">
-<link rel="stylesheet" href="style-contact.css">
+	<link rel="stylesheet" href="style-contact.css">
+<link rel="stylesheet" href="style-footer.css">
 
 	<!-- font setting  -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +23,12 @@
 
 	<title>Document</title>
 	<style>
-	
+		/* :reset {
+			--darkblue: #2e5180;
+
+		} */
+
+
 	</style>
 </head>
 
@@ -133,13 +140,13 @@
 
 				<p>
 					<label for="">
-						 <span class="sr-only">メールアドレス</span>
+						<span class="sr-only">メールアドレス</span>
 						<input type="email" name="email" id="" placeholder="メールアドレス">
 					</label>
 				</p>
 
 				<p>
-					<label for=""> 
+					<label for="">
 						<span class="sr-only">メッセージ</span>
 						<textarea name="msg" id="" cols="30" rows="10" placeholder="メッセージを入力して下さい"></textarea>
 					</label>
@@ -154,9 +161,33 @@
 			</form>
 		</div>
 	</section>
-	<section class="">
+	<footer class="footer">
+		<div class="container">
+			<div class="info">
+				<div class="site">
+					<img src="./img/bb-white.svg" alt="">
+					<div>
+						<p class="corp">
+							BBアシストかんぱにー
+						</p>
+					</div>
+				</div>
+				<p class="add">
+					〒000-0000 <br>
+					福岡県福岡市南区向野　ｘ－ｘ－ｘ<br>
+					コンピュータ教育学院メディアコミュニケーション<br>
+					<br>
+					TEL: xxx-xxxx-xxxx
+				</p>
+			</div>
+			<ul class="sns">
+				<li><a href="#"><img src="img/logo-twitter.svg" alt="Twitter"></a></li>
+				<li><a href="#"><img src="img/logo-facebook.svg" alt="Facebook"></a></li>
+				<li><a href="#"><img src="img/logo-instagram.svg" alt="Instagram"></a></li>
+			</ul>
+		</div>
 
-	</section>
+	</footer>
 </body>
 
 </html>
