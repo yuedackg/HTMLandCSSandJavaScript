@@ -1,0 +1,110 @@
+.contact {
+	padding: 62px 0;
+	background-color: #eef4fb;
+	color: #333333;
+
+}
+@media( min-width: 900px ){
+	.contact{
+		padding: 0 ;
+		background: none;
+
+	}
+	.contact .container{
+		display: flex;
+		justify-content: space-between;
+		padding: 96px 9% 62px ;
+		box-sizing: border-box;
+		background-color: #eef4f8;
+
+	}
+	.contact .text{
+		flex: 0 0 auto;
+
+	}
+	.contact .form{
+		flex: 1 1 auto;
+		max-width: 457px;
+		margin-left: 1em;
+		margin-top: 0;
+
+	}
+}
+
+.contact h2 {
+	margin-bottom: 42px;
+	font-size: 24px;
+
+}
+
+.contact h2+p {
+	font-size: 12px;
+	line-height: 2.17;
+
+}
+
+@media(min-width: 900px) {
+	.contact h2 {
+		font-size: 36px;
+
+	}
+
+	.contact h2+p {
+		font-size: 14px;
+		line-height: 1.86;
+
+	}
+
+}
+.form{
+	margin-top: 46px;
+
+}
+.form input[type="text"], .form input[type="email"], .form textarea{
+	width: 100%;
+	margin-bottom: 17px;
+	padding: 12px 20px 14px;
+	border: solid 1px #cdd6dd;
+	/* 内余白・外余白・枠線をすべて、レイアウトボックスのサイズに収める指定　⇨ border-box */
+	box-sizing: border-box;
+	border-radius: 0;
+	/* プラットフォームのデザインを無効にする */
+	-webkit-appearance: none;
+	color: #333333;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 16px;
+
+}
+.form ::placeholder{
+	color: #cdd6dd;
+	opacity: 1;
+}
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder{
+	color: #cdd6dd;
+
+}
+.form ::-ms-input-placeholder{
+	color: #cdd6dd;
+
+}
+.form textarea{
+	height: 150px;
+
+}
+.form .btn{
+	width: 100%;
+	margin: 0;
+	border: none;
+	background-color: #2e5180;
+	color: #ffffff;
+	cursor: pointer;
+	-webkit-appearance: none;
+
+}
+@media( min-width: 900px ){
+	.form .btn{
+		width: 272px;
+
+	}
+}
