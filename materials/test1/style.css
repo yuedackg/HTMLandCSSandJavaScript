@@ -9,16 +9,7 @@ body {
 }
 
 /* reset  */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-figure {
+body,h1,h2,h3,h4,h5,h6,p,ul,figure {
 	margin: 0;
 	padding: 0;
 }
@@ -171,7 +162,7 @@ a:hover {
 }
 .hero p{
 	font-size: 14px;
-	color: --darkblue;
+	color: var (--darkblue) ;
 	margin-bottom: 15px;
 }
 
