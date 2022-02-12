@@ -6,10 +6,78 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<style>
+		body {
+			display: flex;
+			flex-wrap: wrap;
+			width: 800px;
 
+		}
+
+		header {
+			border: solid 1px red;
+			box-sizing: border-box;
+			width: 100%;
+
+		}
+
+		nav {
+			width: 30%;
+			box-sizing: border-box;
+
+		}
+
+		main {
+			width: calc(100% - 30%);
+			border: solid 1px red;
+			box-sizing: border-box;
+
+		}
+
+		img {
+			width: 200px;
+
+		}
+
+		/* section>div>div{
+			width: calc( 100% - 200px );
+			
+		} */
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.container>div {
+			width: calc(100% - 200px);
+		}
+	</style>
+	<script>
+		function showProcesser() {
+			let item = document.getElementById("sec1")
+			item.style.display = "block";
+			item = document.getElementById("sec2")
+			item.style.display = "none";
+			item = document.getElementById("sec3")
+			item.style.display = "none"
+
+		}
+		function showMemoryModule() {
+			let item = document.getElementById("sec1")
+			item.style.display = "none"
+			item =document.getElementById("sec2")
+			item.style.display = "block"
+			item=document.getElementById("sec3")
+			item.style.display = "none"
+		}
+
+		function showStorage() {
+
+		}
+	</script>
 </head>
 
-<body onload="init()">
+<body onload="showProcesser()">
 	<header>
 		<h1>コンピュータのコンポーネントについて </h1>
 	</header>
@@ -17,9 +85,9 @@
 		<div>
 			<h1> コンテンツの切り替え </h1>
 			<ul>
-				<li id="li-1">Processer </li>
-				<li id="li-2">Memory Module</li>
-				<li id="li-3">Memory System</li>
+				<li id="li-1" onclick="showProcesser()">Processer </li>
+				<li id="li-2" onclick="showMemoryModule()">Memory Module</li>
+				<li id="li-3" onclick="showStorage()">Memory System</li>
 			</ul>
 		</div>
 		<div id="nav2">
@@ -34,7 +102,7 @@
 		<h1>半導体製品について </h1>
 		<section id="sec1">
 			<h2>Processer </h2>
-			<div>
+			<div class="container">
 				<img src="./image/AMD_Ryzen_5_2600.jpg" alt="">
 				<div>
 					<p>Ryzen はアドバンスト・マイクロ・デバイセズ (AMD)
@@ -42,7 +110,7 @@
 						サミットで公式に発表された。</p>
 				</div>
 			</div>
-			<div>
+			<div class="container">
 				<img src="./image/160px-Intel_core_i7_940.jpg" alt="">
 				<div>
 					<p>Core i7 はハイエンド向けの上位製品であり、主にメインストリーム向けにはクアッドコア /
@@ -55,7 +123,7 @@
 			<div>
 				<div>
 					<h2>SIMM Module</h2>
-					<div>
+					<div class="container">
 						<img src="./image/SIMM-muistikampoja.jpg" alt="">
 						<div class="IMMDescription">
 							SIMMとは、パーソナルコンピュータで RAM として使われるメモリモジュールの一種である。現在主流である DIMM とは異なり、SIMM の接点はモジュールの両面で冗長化されている。
@@ -65,7 +133,7 @@
 				</div>
 				<div>
 					<h2>DIMM Module</h2>
-					<div>
+					<div class="container">
 						<img src="./image/DIMM.jpg" alt="">
 						<div class="IMMDescription">
 							DIMMは、複数のDRAMチップをプリント基板上に搭載したメモリモジュールのことを指し、コンピュータの主記憶として利用される。また、そのピン配置や電気的特性を規定したDIMM規格のこと。
@@ -78,14 +146,14 @@
 		<section id="sec3">
 
 			<h2>Storage </h2>
-			<div class="layoutRow">
+			<div class="layoutRow container">
 				<img src="./image/SSD.jpg" alt="">
 				<div>
 					ソリッドステートドライブとは、半導体メモリをディスクドライブのように扱える補助記憶装置の一種である。シリコンドライブ、半導体ドライブ、メモリドライブ、擬似ディスクドライブなどとも呼ばれる。
 				</div>
 
 			</div>
-			<div class="layoutRow">
+			<div class="layoutRow container">
 				<img src="./image/HDD.jpg" alt="">
 				<div>
 					ハードディスクドライブとは、磁性体を塗布した円盤を高速回転させ、磁気ヘッドを移動することで、情報を記録し読み出す補助記憶装置の一種である。SSDと比べ、大容量でも低価格なことが特徴。
