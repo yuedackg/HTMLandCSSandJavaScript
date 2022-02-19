@@ -10,22 +10,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="base.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/service.css">
 
-    <style>
-        body {
-            background-color:var( --basecolor); 
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-
-        .container {
-            display: flex;
-        }
-
-    </style>
 </head>
+
+<style>
+    .body {
+width: 800px;
+
+        background-color: var(--basecolor);
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .message div {
+        flex-direction: column;
+    }
+
+    /* ueda add. 2022.02.19. */
+    .message {
+
+        margin: auto;
+        background-color: var(--basecolor);
+        color: white;
+        padding: 67px 0;
+    }
+
+    .message h2 {
+        display: inline-block;
+        margin-bottom: 38px;
+        font-size: 24px;
+        line-height: 1.67;
+        text-align: center;
+
+    }
+
+    .messsage p {
+        max-width: 640px;
+        margin:auto;
+        font-size: 14pt;
+        line-height: 1.86;
+
+
+    }
+
+    
+    .dateil.office figure {
+        background-image: url(img/office.jpg);
+    }
+</style>
 
 <header>
     <div class="container spacing">
@@ -48,9 +90,53 @@
         <div class="container herocontainer" <hi>
             <img src="img/hero.svg" alt="">
             </hi>
-            <p>
+            　<p>
                 縁の下の力持ちとして、お仕事を支えます。
-                </p1>
+                　</p>
+        </div>
+    </div>
+</section>
+<section class="message">
+    <div class="container">
+        <h2>
+            ビジネスアシスタントとして<br>
+            サポートを続けて20年
+        </h2>
+        <p>
+            プロのビジネスアシスタントとして独立後、
+            様々なお客様からご依頼をいただき、
+            多様な業務、事業効率化などのサポートを行ってきました。
+            得意分野から多岐にわたるスタッフがそろっていますので、
+            必要に応じてどのような業務も対応いたし、
+            雑事に振り回されることなく重要な案件に取り組んでいただくことを目指しています。
+        </p>
+    </div>
+</section>
+<section class="service">
+    <div class="container">
+        <h2>
+            アシストサービス
+        </h2>
+        <p>
+            私たちにできること
+        </p>
+        <div class="details">
+            <article class="dateil office">
+                <figure> </figure>
+                <h3>
+                    オフィス業務<br>サポート
+                </h3>
+                <p>
+                    書類管理、電話・メール対応、スケジュール管理
+                    デジタルトランスフォーメーションなど
+                    様々なオフィス業務のサポートを行います。
+                </p>
+                <a href="#"" class=" btn">OFFICE</a>
+            </article>
+            <article class="dateil manage">
+            </article>
+            <article class="detail research">
+            </article>
         </div>
     </div>
 </section>
