@@ -1,0 +1,21 @@
+:root{
+    --basecolor:#0f0fff;
+    --primary:#2e5180;
+    --darkgray:#333333;
+    --middleGray:#707F89;
+    --gray:#CDD6DD;
+    --lightGray:#EFF4F8;
+    --white:#ffffff;
+
+}
+
+body,
+div,
+header,
+nav,
+main,
+footer,
+section{
+margin:0;
+padding: 0;
+}
