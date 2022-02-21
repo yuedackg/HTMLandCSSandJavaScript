@@ -27,39 +27,39 @@
         }
 
 
-        .message{
+        .message {
             background-color: var(--basecolor);
-            color:#ffffff;
+            color: #ffffff;
             padding: 67px 0;
 
         }
-        
-        .message h2{
+
+        .message h2 {
             margin-bottom: 38px;
             font-size: 24px;
             line-height: 1.67;
             text-align: center;
         }
 
-        .message p{
+        .message p {
             max-width: 640px;
             margin: auto;
             font-size: 14px;
             line-height: 1.86;
         }
 
-        .message div{
+        .message div {
             flex-direction: column;
 
         }
 
-        .service{
+        .service {
             padding: 67px 0;
             text-align: center;
 
         }
 
-        .service h2{
+        .service h2 {
             display: inline-block;
             margin-bottom: 16px;
             padding-bottom: 9px;
@@ -67,62 +67,62 @@
 
         }
 
-        .service h2+p{
-            color:#2e5180;
+        .service h2+p {
+            color: #2e5180;
             font-size: 16px;
         }
 
 
-        .details{
+        .details {
             margin-top: 53px;
-            color:#333333;
+            color: #333333;
 
         }
 
-        .detail:not(:last-child){
+        .detail:not(:last-child) {
             margin-bottom: 67px;
 
         }
 
-        .detail h3{
+        .detail h3 {
             margin-bottom: 17px;
             font-size: 20px;
             line-height: 1.75;
 
         }
 
-        .detail p{
+        .detail p {
             max-width: 264px;
-            margin:0 auto 25px;
+            margin: 0 auto 25px;
             font-size: 12px;
             line-height: 2;
         }
 
-        .detail figure{
+        .detail figure {
             height: 246px;
             margin-bottom: 22px;
             background-position: center;
             background-size: cover;
-            
+
         }
 
-        .detail.office figure{
+        .detail.office figure {
             background-image: url(img/office.jpg);
 
         }
 
-        .detail.manage figure{
+        .detail.manage figure {
             background-image: url(img/manage.jpg);
         }
 
-        .detail.research figure{
+        .detail.research figure {
             background-image: url(img/research.jpg);
         }
 
-        .btn{
+        .btn {
             display: block;
             width: 208px;
-            margin:0 auto;
+            margin: 0 auto;
             padding: 11px 11px 13px;
             box-sizing: border-box;
             border: solid 2px var(--currentColor);
@@ -132,121 +132,165 @@
             font-weight: bold;
             text-align: center;
         }
-        
-        .service .container{
+
+        .service .container {
             flex-direction: column;
         }
 
         .contact {
-	padding: 62px 0;
-	background-color: #eef4fb;
-	color: #333333;
+            padding: 62px 0;
+            background-color: #eef4fb;
+            color: #333333;
 
+        }
+
+        @media(min-width: 900px) {
+            .contact {
+                padding: 0;
+                background: none;
+
+            }
+
+            .contact .container {
+                display: flex;
+                justify-content: space-between;
+                padding: 96px 9% 62px;
+                box-sizing: border-box;
+                background-color: #eef4f8;
+
+            }
+
+            .contact .text {
+                flex: 0 0 auto;
+
+            }
+
+            .contact .form {
+                flex: 1 1 auto;
+                max-width: 457px;
+                margin-left: 1em;
+                margin-top: 0;
+
+            }
+        }
+
+        .contact h2 {
+            margin-bottom: 42px;
+            font-size: 24px;
+
+        }
+
+        .contact h2+p {
+            font-size: 12px;
+            line-height: 2.17;
+
+        }
+
+        @media(min-width: 900px) {
+            .contact h2 {
+                font-size: 36px;
+
+            }
+
+            .contact h2+p {
+                font-size: 14px;
+                line-height: 1.86;
+
+            }
+
+        }
+
+        .form {
+            margin-top: 46px;
+
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        .form textarea {
+            width: 100%;
+            margin-bottom: 17px;
+            padding: 12px 20px 14px;
+            border: solid 1px #cdd6dd;
+            /* 内余白・外余白・枠線をすべて、レイアウトボックスのサイズに収める指定　⇨ border-box */
+            box-sizing: border-box;
+            border-radius: 0;
+            /* プラットフォームのデザインを無効にする */
+            -webkit-appearance: none;
+            color: #333333;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 16px;
+
+        }
+
+        .form ::placeholder {
+            color: #cdd6dd;
+            opacity: 1;
+        }
+
+        .form input:-ms-input-placeholder,
+        .form textarea:-ms-input-placeholder {
+            color: #cdd6dd;
+
+        }
+
+        .form ::-ms-input-placeholder {
+            color: #cdd6dd;
+
+        }
+
+        .form textarea {
+            height: 150px;
+
+        }
+
+        .form .btn {
+            width: 100%;
+            margin: 0;
+            border: none;
+            background-color: #2e5180;
+            color: #ffffff;
+            cursor: pointer;
+            -webkit-appearance: none;
+
+        }
+
+        @media(min-width: 900px) {
+            .form .btn {
+                width: 272px;
+
+            }
+        }
+
+        /* 作業性向上のため、表示するところを絞り込む */
+        header,
+        section {
+            display: none;
+
+        }
+
+        .contact {
+            display: block;
+        }
+        /* ueda 加えた */
+        .container{
+            width: 84%;
+            margin: 0 auto;;
+        }
+        @media( min-width:900px){
+            .container{
+                width: 91%;
+                max-width: 1240px;
+
+            }
+        }
+        .header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 74px;
 }
-@media( min-width: 900px ){
-	.contact{
-		padding: 0 ;
-		background: none;
 
-	}
-	.contact .container{
-		display: flex;
-		justify-content: space-between;
-		padding: 96px 9% 62px ;
-		box-sizing: border-box;
-		background-color: #eef4f8;
-
-	}
-	.contact .text{
-		flex: 0 0 auto;
-
-	}
-	.contact .form{
-		flex: 1 1 auto;
-		max-width: 457px;
-		margin-left: 1em;
-		margin-top: 0;
-
-	}
-}
-
-.contact h2 {
-	margin-bottom: 42px;
-	font-size: 24px;
-
-}
-
-.contact h2+p {
-	font-size: 12px;
-	line-height: 2.17;
-
-}
-
-@media(min-width: 900px) {
-	.contact h2 {
-		font-size: 36px;
-
-	}
-
-	.contact h2+p {
-		font-size: 14px;
-		line-height: 1.86;
-
-	}
-
-}
-.form{
-	margin-top: 46px;
-
-}
-.form input[type="text"], .form input[type="email"], .form textarea{
-	width: 100%;
-	margin-bottom: 17px;
-	padding: 12px 20px 14px;
-	border: solid 1px #cdd6dd;
-	/* 内余白・外余白・枠線をすべて、レイアウトボックスのサイズに収める指定　⇨ border-box */
-	box-sizing: border-box;
-	border-radius: 0;
-	/* プラットフォームのデザインを無効にする */
-	-webkit-appearance: none;
-	color: #333333;
-	font-family: 'Noto Sans JP', sans-serif;
-	font-size: 16px;
-
-}
-.form ::placeholder{
-	color: #cdd6dd;
-	opacity: 1;
-}
-.form input:-ms-input-placeholder,
-.form textarea:-ms-input-placeholder{
-	color: #cdd6dd;
-
-}
-.form ::-ms-input-placeholder{
-	color: #cdd6dd;
-
-}
-.form textarea{
-	height: 150px;
-
-}
-.form .btn{
-	width: 100%;
-	margin: 0;
-	border: none;
-	background-color: #2e5180;
-	color: #ffffff;
-	cursor: pointer;
-	-webkit-appearance: none;
-
-}
-@media( min-width: 900px ){
-	.form .btn{
-		width: 272px;
-
-	}
-}
     </style>
 </head>
 
@@ -309,7 +353,7 @@
                     <p>
                         書類管理、電話・メール対応、スケジュール管理、デジタルトランスフォーメーションなど、様々なオフィス業務のサポートを行います。
                     </p>
-                    <a href="#"class="btn">OFFICE</a>
+                    <a href="#" class="btn">OFFICE</a>
 
                 </article>
                 <article class="detail manege">
@@ -335,36 +379,38 @@
                     子細なことでもお気軽にお問い合わせください。
                 </p>
             </div>
+            <form action="" class="from">
+                <p>
+                    <label for="name">
+                        <span class="sr-only">名前</span>
+                        <input type="text" name="name" id="" placeholder="名前"></label>
+                </p>
+
+                <p>
+                    <label for="">
+                        <span class="sr-only">メールアドレス</span>
+                        <input type="email" name="email" id="" placeholder="メールアドレス">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="">
+                        <span class="sr-only">メッセージ</span>
+                        <textarea name="msg" id="" cols="30" rows="10" placeholder="メッセージを入力して下さい"></textarea>
+                    </label>
+                </p>
+
+                <p>
+                    <input type="submit" value="送信" class="btn">
+                </p>
+            </form>
         </div>
+
     </section>
 
-    <form action="" class="from">
-        <p>
-            <label for="name">
-                <span class="sr-only">名前</span>
-                <input type="text" name="name" id="" placeholder="名前"></label>
-        </p>
 
-        <p>
-            <label for="">
-                <span class="sr-only">メールアドレス</span>
-                <input type="email" name="email" id="" placeholder="メールアドレス">
-            </label>
-        </p>
 
-        <p>
-            <label for="">
-                <span class="sr-only">メッセージ</span>
-                <textarea name="msg" id="" cols="30" rows="10" placeholder="メッセージを入力して下さい"></textarea>
-            </label>
-        </p>
 
-        <p>
-            <input type="submit" value="送信" class="btn">
-        </p>
-    </form>
-
-    
 </body>
 
 </html>
