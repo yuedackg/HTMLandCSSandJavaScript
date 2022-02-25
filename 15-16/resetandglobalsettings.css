@@ -1,0 +1,13 @@
+		/* リセットCSS */
+		* {
+			padding: 0px;
+			margin: 0px;
+
+		}
+
+		/* CSS変数の設定 */
+		:root {
+			--baseColor: blue;
+
+
+		}

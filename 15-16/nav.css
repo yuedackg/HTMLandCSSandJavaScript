@@ -1,0 +1,54 @@
+
+		/*
+			メニューの全体書式の設定
+			行頭マークなし
+			左の絶対余白は２４０px
+		*/
+		nav ul {
+			list-style-type: none;
+			left: 240px;
+		}
+
+		nav ul:nth-child(1) {
+			position: fixed;
+			top: 10px;
+			left: 40px;
+		}
+
+		nav ul:nth-child(2) {
+			position: fixed;
+			top: 10px;
+
+		}
+
+		nav ul:nth-child(3) {
+			position: fixed;
+			top: 50px;
+
+		}
+
+		nav ul:nth-child(4) {
+			position: fixed;
+			top: 90px;
+
+		}
+
+		nav ul:nth-child(5) {
+			position: fixed;
+			top: 130px;
+
+		}
+
+		nav li {
+			color: white;
+			background-color: burlywood;
+			box-sizing: border-box;
+			border: solid 1px yellow;
+			width: 200px;
+			height: 40px;
+			font-size: 15pt;
+			display: flex;
+			align-items: center;
+			padding-left: 5px;
+
+		}

@@ -1,0 +1,17 @@
+
+		/* ヘッダはボックス要素だが、メニューの入る位置を内側余白でよける */
+		header {
+			display: flex;
+			padding-left: 50px;
+		}
+
+		/* メニューアイコン　ダミー */
+		#menuicon {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			width: 30px;
+			height: 30px;
+			background-color: blue;
+
+		}
