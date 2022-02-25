@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+
+    <style>
+        body {
+            background-color: var(--basecolor);
+            font-family: 'Noto Sans JP', sans-serif;
+
+        }
+
+        .container {
+            display: flex;
+
+        }
+
+
+        .message {
+            background-color: var(--basecolor);
+            color: #ffffff;
+            padding: 67px 0;
+
+        }
+
+        .message h2 {
+            margin-bottom: 38px;
+            font-size: 24px;
+            line-height: 1.67;
+            text-align: center;
+        }
+
+        .message p {
+            max-width: 640px;
+            margin: auto;
+            font-size: 14px;
+            line-height: 1.86;
+        }
+
+        .message div {
+            flex-direction: column;
+
+        }
+
+        .service {
+            padding: 67px 0;
+            text-align: center;
+
+        }
+
+        .service h2 {
+            display: inline-block;
+            margin-bottom: 16px;
+            padding-bottom: 9px;
+            border-bottom: dotted 2px var(--currentColor);
+
+        }
+
+        .service h2+p {
+            color: #2e5180;
+            font-size: 16px;
+        }
+
+
+        .details {
+            margin-top: 53px;
+            color: #333333;
+
+        }
+
+        .detail:not(:last-child) {
+            margin-bottom: 67px;
+
+        }
+
+        .detail h3 {
+            margin-bottom: 17px;
+            font-size: 20px;
+            line-height: 1.75;
+
+        }
+
+        .detail p {
+            max-width: 264px;
+            margin: 0 auto 25px;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .detail figure {
+            height: 246px;
+            margin-bottom: 22px;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .detail.office figure {
+            background-image: url(img/office.jpg);
+
+        }
+
+        .detail.manage figure {
+            background-image: url(img/manage.jpg);
+        }
+
+        .detail.research figure {
+            background-image: url(img/research.jpg);
+        }
+
+        .btn {
+            display: block;
+            width: 208px;
+            margin: 0 auto;
+            padding: 11px 11px 13px;
+            box-sizing: border-box;
+            border: solid 2px var(--currentColor);
+            border-radius: 24px;
+            color: #2e5180;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .service .container {
+            flex-direction: column;
+        }
+
+        .contact {
+            padding: 62px 0;
+            background-color: #eef4fb;
+            color: #333333;
+
+        }
+
+        @media(min-width: 900px) {
+            .contact {
+                padding: 0;
+                background: none;
+
+            }
+
+            .contact .container {
+                display: flex;
+                justify-content: space-between;
+                padding: 96px 9% 62px;
+                box-sizing: border-box;
+                background-color: #eef4f8;
+
+            }
+
+            .contact .text {
+                flex: 0 0 auto;
+
+            }
+
+            .contact .form {
+                flex: 1 1 auto;
+                max-width: 457px;
+                margin-left: 1em;
+                margin-top: 0;
+
+            }
+        }
+
+        .contact h2 {
+            margin-bottom: 42px;
+            font-size: 24px;
+
+        }
+
+        .contact h2+p {
+            font-size: 12px;
+            line-height: 2.17;
+
+        }
+
+        @media(min-width: 900px) {
+            .contact h2 {
+                font-size: 36px;
+
+            }
+
+            .contact h2+p {
+                font-size: 14px;
+                line-height: 1.86;
+
+            }
+
+        }
+
+        .form {
+            margin-top: 46px;
+
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        .form textarea {
+            width: 100%;
+            margin-bottom: 17px;
+            padding: 12px 20px 14px;
+            border: solid 1px #cdd6dd;
+            /* 内余白・外余白・枠線をすべて、レイアウトボックスのサイズに収める指定　⇨ border-box */
+            box-sizing: border-box;
+            border-radius: 0;
+            /* プラットフォームのデザインを無効にする */
+            -webkit-appearance: none;
+            color: #333333;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 16px;
+
+        }
+
+        .form ::placeholder {
+            color: #cdd6dd;
+            opacity: 1;
+        }
+
+        .form input:-ms-input-placeholder,
+        .form textarea:-ms-input-placeholder {
+            color: #cdd6dd;
+
+        }
+
+        .form ::-ms-input-placeholder {
+            color: #cdd6dd;
+
+        }
+
+        .form textarea {
+            height: 150px;
+
+        }
+
+        .form .btn {
+            width: 100%;
+            margin: 0;
+            border: none;
+            background-color: #2e5180;
+            color: #ffffff;
+            cursor: pointer;
+            -webkit-appearance: none;
+
+        }
+
+        @media(min-width: 900px) {
+            .form .btn {
+                width: 272px;
+
+            }
+        }
+
+        /* 作業性向上のため、表示するところを絞り込む */
+        header,
+        section {
+            display: none;
+
+        }
+
+        .contact {
+            display: block;
+        }
+        /* ueda 加えた */
+        .container{
+            width: 84%;
+            margin: 0 auto;;
+        }
+        @media( min-width:900px){
+            .container{
+                width: 91%;
+                max-width: 1240px;
+
+            }
+        }
+        .header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 74px;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container spacing">
+            <div class="container">
+                <img src="img/bb.svg" alt="">
+                <div>
+                    <p>BBアシスタントカンパニー</p>
+                    <p>確かなスタッフによる業務サポート</p>
+                </div>
+            </div>
+
+            <button class="nav-button">
+                <span class="sr-only">Menu</span>
+            </button>
+        </div>
+
+    </header>
+    <section class="hero">
+        <div class="catch">
+            <div class="container herocontainer">
+                <h1>
+                    <img src="img/hero.svg" alt="">
+                </h1>
+                <p>縁の下の力持ちとして、お仕事を支えます。
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="message">
+        <div class="container">
+            <h2>
+                ビジネスアシスタントとして<br>
+                サポートを続けて２０年
+            </h2>
+            <p>
+                プロのビジネスアシスタントとして独立後、様々なお客様からご依頼をいただき、多様な業務、業務効率化などのサポートを行ってきました。
+                得意分野が多岐にわたるスタッフがそろっていますので、必要に応じてどのような業務も対応いたし、雑事に振り回されることなく重要な案件に取り組んでいただくことを目指しています。
+            </p>
+        </div>
+
+    </section>
+
+    <section class="service">
+        <div class="container">
+            <h2>
+                アシスタントサービス
+            </h2>
+            <p>
+                私たちにできること
+            </p>
+            <div class="details">
+                <article class="detail office">
+                    <figure></figure>
+                    <h3>
+                        オフィス業務<br>サポート
+                    </h3>
+                    <p>
+                        書類管理、電話・メール対応、スケジュール管理、デジタルトランスフォーメーションなど、様々なオフィス業務のサポートを行います。
+                    </p>
+                    <a href="#" class="btn">OFFICE</a>
+
+                </article>
+                <article class="detail manege">
+
+                </article>
+                <article class="detail research">
+
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="text">
+                <h2>
+                    お問い合わせ
+                </h2>
+                <p>
+                    もっと業務を効率化したい<br>
+                    マネージメントのわずらわしさから解放されたい<br>
+                    本業に集中したいなど<br>
+                    子細なことでもお気軽にお問い合わせください。
+                </p>
+            </div>
+            <form action="" class="from">
+                <p>
+                    <label for="name">
+                        <span class="sr-only">名前</span>
+                        <input type="text" name="name" id="" placeholder="名前"></label>
+                </p>
+
+                <p>
+                    <label for="">
+                        <span class="sr-only">メールアドレス</span>
+                        <input type="email" name="email" id="" placeholder="メールアドレス">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="">
+                        <span class="sr-only">メッセージ</span>
+                        <textarea name="msg" id="" cols="30" rows="10" placeholder="メッセージを入力して下さい"></textarea>
+                    </label>
+                </p>
+
+                <p>
+                    <input type="submit" value="送信" class="btn">
+                </p>
+            </form>
+        </div>
+
+    </section>
+
+
+
+
+</body>
+
+</html>
